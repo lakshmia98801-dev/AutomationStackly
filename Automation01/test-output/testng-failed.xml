@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation_testing.DashBoardPage">
+      <class name="automation_testing.RecruitmentPage_Positive">
         <methods>
-          <include name="tearDown"/>
           <include name="verifySuccessfulLogin"/>
+          <include name="tearDown"/>
+          <include name="startVideo"/>
+          <include name="stopVideo"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- automation_testing.DashBoardPage -->
+      </class> <!-- automation_testing.RecruitmentPage_Positive -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

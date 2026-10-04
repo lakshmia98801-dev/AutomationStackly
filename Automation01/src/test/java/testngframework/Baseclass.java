@@ -3,6 +3,7 @@ package testngframework;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -29,6 +30,10 @@ public class Baseclass extends Create_company_workspace {
 	protected String appUrl;
 	protected String username;
 	protected String password;
+
+	public WebDriverWait waitFor() {
+		return new WebDriverWait(driver, Duration.ofSeconds(15));
+	}
 
 	/**
 	 * Loads config/credentials from config.properties Keep this file OUT of version
